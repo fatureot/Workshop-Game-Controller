@@ -12,6 +12,10 @@ public class PipaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.isGameStarted == false)
+        {
+            return;
+        }
         transform.position = Vector2.MoveTowards(transform.position, Vector2.left * 100, Time.deltaTime * 5);
     }
 }
